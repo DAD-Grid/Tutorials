@@ -17,7 +17,7 @@ $  curl -sSL https://get.docker.com/ | sh
 
 ### Agregar el usuario actual al grupo Docker
 
-Esto permite que se peuda ejecutar docker sin ser administrador
+Esto permite ejecutar docker sin ser administrador
 
 
 ```sh
@@ -43,8 +43,8 @@ $    git clone https://github.com/InsightSoftwareConsortium/ITK.git --branch rel
 $    docker pull dockcross/android-arm
 ```
 
-Una vez descargada la imagen, se puede ejecutar. Actualmente el proceso por defecto de la imagen imprime a la salida estándar un shell script que facitlita su uso.
-En caso que la imagen cambie su funcionamiento en el futuro, ir al [repositorio de Github](https://github.com/dockcross/dockcross).
+Una vez descargada la imagen, se puede ejecutar. Actualmente el proceso por defecto de la imagen imprime a la salida estándar un shell script que facilita su uso.
+En caso que la imagen cambie su funcionamiento en el futuro, remitirse al [repositorio de Github](https://github.com/dockcross/dockcross).
 
 #### Ejecutar el contenedor y guardar la salida al archivo con nombre dockcross
 
