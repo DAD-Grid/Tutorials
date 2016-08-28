@@ -103,3 +103,28 @@ $    make
 ```
 
 * Una vez terminada la construcción, el resultado estará en la carpeta build del host.
+
+
+## Errores comunes
+
+*Error al configuar cmake por vlx. No encuentra has_infinity para la plataforma android.
+
+```sh
+CMake Error at Modules/ThirdParty/VNL/src/vxl/config/cmake/config/VXLIntrospectionConfig.cmake:736
+ (message):
+   Compiler is required to have has_infinity.
+ Call Stack (most recent call first):
+   Modules/ThirdParty/VNL/src/vxl/CMakeLists.txt:184 (include)
+```
+
+Para esto es necesario abrir el archivo VXLIntrospectionConfig.cmake comentando las siguientes lineas
+
+```sh
+  #PERFORM_CMAKE_TEST_RUN(${VXL_PLFM_TEST_FILE} VCL_NUMERIC_LIMITS_HAS_INFINITY)
+  #if(NOT VCL_NUMERIC_LIMITS_HAS_INFINITY)
+  #message(FATAL_ERROR "Compiler is required to have has_infinity.")
+  #endif()
+  #unset(VCL_NUMERIC_LIMITS_HAS_INFINITY)
+```
+
+En el momento de creación de este tutorial las lineas a comentar estan desde la linea 734 a la 738 pero esto puede cambiar en el futuro.
