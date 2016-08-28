@@ -125,6 +125,7 @@ Para esto es necesario abrir el archivo VXLIntrospectionConfig.cmake comentando 
   #message(FATAL_ERROR "Compiler is required to have has_infinity.")
   #endif()
   #unset(VCL_NUMERIC_LIMITS_HAS_INFINITY)
+  set(VCL_NUMERIC_LIMITS_HAS_INFINITY 0)
 ```
 
 En el momento de creación de este tutorial las lineas a comentar estan desde la linea 734 a la 738 pero esto puede cambiar en el futuro.
