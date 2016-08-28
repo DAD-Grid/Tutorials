@@ -86,5 +86,20 @@ $    cd build/
 $    ccmake ../ITK/
 ```
 
+* Modificar el contenido de las siguientes banderas
 
+| Bandera                   | Valor      |
+|---------------------------|------------|
+| ITK_BUILD_DEFAULT_MODULES | OFF        |
+| ITK_DYNAMIC_LOADING       | OFF        |
+| BUILD_SHARED_LIBS         | OFF        |
+| BUILD_TESTING             | OFF        |
+| CMAKE_EXE_LINKER_FLAGS    | -fPIE -pie |
 
+* Una vez terminado el proceso, hacer make.
+
+```sh
+$    make
+```
+
+* Una vez terminada la construcción, el resultado estará en la carpeta build del host.
