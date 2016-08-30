@@ -88,7 +88,7 @@ Construir el toolchain de Android con el script que provee Boinc para la arquite
 $  ./build_androidtc_arm.sh
 ```
 
-El siguiente paso es modificar los scripts de boinc para compilar openssl, curl y las librerìas para arm
+El siguiente paso es modificar los scripts de boinc para compilar openssl, curl y las librerías para arm
 
 Los archivos a modificar son los siguientes.
 
@@ -121,7 +121,7 @@ $  export CXXFLAGS="--sysroot=$TCSYSROOT -DANDROID -Wall -I$TCINCLUDES/include -
 
 ### Compilar el Wrapper para android
 
-Ejecutar los siguientes scripts en este orden (es necesario hacer esta operación como super usuario para que se realice la instalación correctamente)
+Ejecutar los siguientes scripts en este orden (es necesario realizar estas operaciones como super usuario para que se realice la instalación correctamente)
 
 ```sh
 $  ./build_curl_arm.sh
