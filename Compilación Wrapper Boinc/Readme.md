@@ -108,7 +108,7 @@ $  CURL="$HOME/curl"
 La ruta de la variable OPENSSL debe apuntar al lugar donde se descargó el código fuente. En este caso es:
 
 ```sh
-$  OPENSSL="$HOME/curl"
+$  OPENSSL="$HOME/openssl"
 ```
 #### build_wrapper_arm.sh (REVISAR)
 
