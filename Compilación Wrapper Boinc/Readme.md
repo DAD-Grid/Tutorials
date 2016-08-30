@@ -119,7 +119,7 @@ Se le debe agregar a la variable CXX_FLAGS las  banderas fPIE y pie. Esto con el
 $  export CXXFLAGS="--sysroot=$TCSYSROOT -DANDROID -Wall -I$TCINCLUDES/include -funroll-loops -fexceptions -O3 -fomit-frame-pointer -fPIE -pie"
 ```
 ### Corrección archivo configure.ac
-En la carpeta fuente de boinc (boinc-src) se encuentra el archivo configure.ac que utiliza el script build_wrapper_arm.sh, este hacer
+En la carpeta fuente de boinc (boinc-src) se encuentra el archivo configure.ac que utiliza el script build_wrapper_arm.sh, este hace
 una verificación de la versión de curl y si no se tiene la versión 7.17.1, la compilación va a terminar con errores.
 Por esta razón es necesario elimiar esta comprobación en el archivo configure.ac:
 ```sh
