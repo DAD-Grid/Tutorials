@@ -121,7 +121,7 @@ $  export CXXFLAGS="--sysroot=$TCSYSROOT -DANDROID -Wall -I$TCINCLUDES/include -
 
 ### Compilar el Wrapper para android
 
-Ejecutar los siguientes scripts en este orden
+Ejecutar los siguientes scripts en este orden (es necesario hacer esta operación como super usuario para que se realice la instalación correctamente)
 
 ```sh
 $  ./build_curl_arm.sh
