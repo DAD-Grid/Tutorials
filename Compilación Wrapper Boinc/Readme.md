@@ -125,7 +125,7 @@ Por esta razón es necesario elimiar esta comprobación en el archivo configure.
 ```sh
   LIBCURL_CHECK_CONFIG([yes], [7.17.1], [haveCurl=yes], [haveCurl=no])
 ```
-y cambiarla por (para indicar que si hay una version de curl construida): 
+y cambiarla por la siguiente linea,  para indicar que si hay una version de curl construida: 
 ```sh
   haveCurl=yes
 ```
