@@ -44,6 +44,8 @@ $  mv android-ndk-r10e-linux-x86_64 android-ndk-r10e
 
 ### Descargar el código fuente de Openssl
 
+El cliente boinc utiliza la librería de openssl por lo que es necesario compilarla para Android.
+
 ```sh
 $  cd $HOME
 ```
@@ -75,7 +77,6 @@ $  cmake .
 
 ### Configuración del servidor boincadm
 
-El cliente boinc utiliza la librería de openssl por lo que es necesario compilarla para Android.
 
 ```sh
 $  cd $HOME/boinc-src/android
