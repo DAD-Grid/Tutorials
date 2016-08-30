@@ -17,7 +17,7 @@ $  curl -sSL https://get.docker.com/ | sh
 
 ### Agregar el usuario actual al grupo Docker
 
-Esto permite ejecutar docker sin ser administrador
+Esto permite ejecutar docker sin ser administrador. Una vez hecha esta operación es necesario cerrar sesión para que se el usaurio actual pueda ejecutar Docker.
 
 
 ```sh
