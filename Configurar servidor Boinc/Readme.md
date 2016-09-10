@@ -6,7 +6,7 @@ Este tutorial se hizo basado en:
 https://www.youtube.com/watch?v=vVZ44scS7pk&list=PLjoVdrzADmhm1_aOwGMTcZgKgPwVPh_ko&index=1
 https://boinc.berkeley.edu/trac/wiki/ServerIntro
 
-Este tutorial se en sistema operativo Ubuntu 16.04.1x64
+Este tutorial se en sistema operativo Ubuntu 14.04.5 x64
 
 ## Prerrequitos
  * Sistema Operativo Linux
