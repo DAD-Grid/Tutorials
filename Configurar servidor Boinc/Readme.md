@@ -1,47 +1,71 @@
 # Configurar servidor Boinc
 
-//TODO: Mejorar redacción y  explicación
-
-Este tutorial se hizo basado en:
-https://www.youtube.com/watch?v=vVZ44scS7pk&list=PLjoVdrzADmhm1_aOwGMTcZgKgPwVPh_ko&index=1
-https://boinc.berkeley.edu/trac/wiki/ServerIntro
-
-Este tutorial se en sistema operativo Ubuntu 14.04.5 x64
+Este tutorial se basa en:
+* https://www.youtube.com/watch?v=vVZ44scS7pk&list=PLjoVdrzADmhm1_aOwGMTcZgKgPwVPh_ko&index=1
+* https://boinc.berkeley.edu/trac/wiki/ServerIntro
 
 ## Prerrequitos
- * Sistema Operativo Linux
- * Git
- * Curl
+ * Sistema Operativo Linux. Distribución Ubuntu 14.04.5 x64
 
 ## Instalación Dependencias
 
-### Instalar paquetes que utiliza boinc
+### Paquetes que necesita Boinc
+```sh
+    -mysql-server 
+    -mysql-client 
+    -php5 
+    -apache2 
+    -php5-gd 
+    -php5-cli 
+    -php5-mysql 
+    -python-mysqldb 
+    -libssl-dev 
+    -libcurl4-openssl-dev 
+    -libnotify-dev
+```
+##### *Línea de comando*
 ```sh
 $  sudo apt-get install mysql-server mysql-client php5 apache2 php5-gd php5-cli php5-mysql python-mysqldb libssl-dev libcurl4-openssl-dev libnotify-dev
 ```
-
-### Instalar paquetes para construir boinc
+## **IMPORTANTE! Recordar contraseña con la que se configura mysql**
+### Paquetes para construir boinc
 
 ```sh
-$  sudo apt-get install build-essential libtool automake autoconf pkg-config libmysql++-dev libssl-dev make git vim
+  -build-essential 
+  -libtool automake 
+  -autoconf 
+  -pkg-config 
+  -libmysql++-dev 
+  -libssl-dev
+  -make 
+  -git 
+```
+##### *Línea de comando*
+```sh
+$  sudo apt-get install build-essential libtool automake autoconf pkg-config libmysql++-dev libssl-dev make git
 ```
 
-## Crear usuario boincadm
-
-### Crear usuario
+## Creación de usuario boincadm
+### Registrar datos personales asociados al usuario boincadm
+##### *Línea de comando*
 
 ```sh
 $ adduser boincadm
 ```
 
-### Agregar usuario a grupo de apache
+## **IMPORTANTE! Recordar contraseña con la que se configura el usuario boincadm**
+### Agregar usuario boincadm al grupo de apache
+
+##### *Línea de comando*
 
 ```sh
 $ usermod -a -G boincadm www-data
 ```
 
-### Crearu usuario en mysql
-
+### Creación de usuario en mysql
+#### Este será el usuario que se usará durante este tutorial para que Boinc administre la base de datos de cada proyecto.
+#### La contraseña que solicita para entrar a _mysql_ es la que se indicó en la instalación de los paquetes que necesita Boinc.
+##### *Líneas de comando*
 ```sh
 $ mysql -u root -p
 > GRANT ALL ON *.* TO 'boincadm'@'localhost';
@@ -49,16 +73,18 @@ $ mysql -u root -p
 > exit;
 ```
 
-## Construri Boinc
+## Construcción de Boinc
 
-### Clonar repositori de boinc
+### Clonar repositorio de boinc en la carpeta boinc-src
+
+##### *Línea de comando*
 
 ```sh
 $ git clone https://github.com/BOINC/boinc.git boinc-src
 ```
 
-### Compilar codigo fuente
-
+### Compilación del código fuente de Boinc
+##### *Líneas de comando*
 ```sh
 $ cd boinc-src
 $ ./_autosetup
