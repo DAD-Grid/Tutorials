@@ -19,6 +19,8 @@ $  ./make_project --url_base <direccionServidor> --dbuser boincadm <nombreProyec
 ```
 se deben cambiar los campos direccionServidor y nombreProyecto por los valores correctos
 
-##
-
+### 
+installar program 'htpasswd'
+sudo apt-get install apache2-utils
+-cb html/ops/.htpasswd boincadm boincadm
 ###

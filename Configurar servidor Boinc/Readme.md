@@ -1,6 +1,5 @@
 # Configurar servidor Boinc
 
-
 Este tutorial se basa en:
 * https://www.youtube.com/watch?v=vVZ44scS7pk&list=PLjoVdrzADmhm1_aOwGMTcZgKgPwVPh_ko&index=1
 * https://boinc.berkeley.edu/trac/wiki/ServerIntro
@@ -91,4 +90,14 @@ $ cd boinc-src
 $ ./_autosetup
 $ ./configure --disable-client
 $ make
+```
+
+## Habilitar el modulo CGI de apache
+
+Si la version de apache es mayor o igual a 2.4 es ncesario activar este modulo y reinicar apache
+
+##### *Líneas de comando*
+```sh
+$ sudo a2enmod cgi
+$ sudo service apache restart
 ```
