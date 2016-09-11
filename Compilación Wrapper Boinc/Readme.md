@@ -1,10 +1,11 @@
 # Compilación del Wrapper de Boinc para ARM
 
-El siguiente tutorial muestra cómo hacer la compilación del wrapper de Boinc para dispositivos android con arquitectura ARM. En esta carpeta se encuentran los archivos de configuración modificados para usarlos como base
+El siguiente tutorial muestra cómo realizar el procesos de compilación cruzada del wrapper de Boinc para dispositivos Android con arquitectura ARM. En esta carpeta se encuentran los archivos de configuración modificados para usarlos como base.
 
 ## Prerrequisitos
 * Servidor Boinc Instalado y Funcionando.
-* cmake (Buscar versión actual, no hay documentación sobre cuál sirve.)
+* cmake version 2.8.12.2
+* Ingresar como usuario boincadm (Configurado anteriormente en el tutorial **Configurar servidor Boinc**)
 
 
 ### Configuración del NDK android

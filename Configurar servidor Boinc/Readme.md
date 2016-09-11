@@ -1,10 +1,9 @@
 # Configurar servidor Boinc
 
-//TODO: Mejorar redacción y  explicación
 
 Este tutorial se basa en:
-https://www.youtube.com/watch?v=vVZ44scS7pk&list=PLjoVdrzADmhm1_aOwGMTcZgKgPwVPh_ko&index=1
-https://boinc.berkeley.edu/trac/wiki/ServerIntro
+* https://www.youtube.com/watch?v=vVZ44scS7pk&list=PLjoVdrzADmhm1_aOwGMTcZgKgPwVPh_ko&index=1
+* https://boinc.berkeley.edu/trac/wiki/ServerIntro
 
 ## Prerrequitos
  * Sistema Operativo Linux. Distribución Ubuntu 14.04.5 x64
