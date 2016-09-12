@@ -54,6 +54,15 @@ $ adduser boincadm
 ```
 
 ## **IMPORTANTE! Recordar contraseña con la que se configura el usuario boincadm**
+
+### Agregar usuario boincadm al grupo de sudo
+
+##### *Línea de comando*
+
+```sh
+$ sudo adduser boincadm sudo
+```
+
 ### Agregar usuario boincadm al grupo de apache
 
 ##### *Línea de comando*
@@ -61,7 +70,6 @@ $ adduser boincadm
 ```sh
 $ usermod -a -G boincadm www-data
 ```
-
 ### Creación de usuario en mysql
 #### Este será el usuario que se usará durante este tutorial para que Boinc administre la base de datos de cada proyecto.
 #### La contraseña que solicita para entrar a _mysql_ es la que se indicó en la instalación de los paquetes que necesita Boinc.
@@ -72,7 +80,13 @@ $ mysql -u root -p
 > SET PASSWORD FOR 'boincadm'@'localhost'='';
 > exit;
 ```
+### Cambiar de sesión al boincadm e ir a la carpeta raiz
 
+##### *Línea de comando*
+```sh
+$ su boincadm
+$ cd $HOME
+```
 ## Construcción de Boinc
 
 ### Clonar repositorio de boinc en la carpeta boinc-src
