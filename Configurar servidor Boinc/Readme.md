@@ -69,7 +69,7 @@ $ sudo adduser boincadm sudo
 ##### *Línea de comando*
 
 ```sh
-$ usermod -a -G boincadm www-data
+$ sudo usermod -a -G boincadm www-data
 ```
 ### Creación de usuario en mysql
 #### Este será el usuario que se usará durante este tutorial para que Boinc administre la base de datos de cada proyecto.
