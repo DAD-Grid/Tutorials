@@ -25,6 +25,7 @@ Este tutorial se basa en:
 ```
 ##### *Línea de comando*
 ```sh
+$  sudo apt-get update #opcional, pero recomendado
 $  sudo apt-get install mysql-server mysql-client php5 apache2 php5-gd php5-cli php5-mysql python-mysqldb libssl-dev libcurl4-openssl-dev libnotify-dev
 ```
 ## **IMPORTANTE! Recordar contraseña con la que se configura mysql**
