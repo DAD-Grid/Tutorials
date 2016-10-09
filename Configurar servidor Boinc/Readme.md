@@ -51,7 +51,7 @@ $  sudo apt-get install build-essential libtool automake autoconf pkg-config lib
 ##### *Línea de comando*
 
 ```sh
-$ adduser boincadm
+$ sudo adduser boincadm
 ```
 
 ## **IMPORTANTE! Recordar contraseña con la que se configura el usuario boincadm**
