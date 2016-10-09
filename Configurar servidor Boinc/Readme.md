@@ -114,5 +114,5 @@ Si la version de apache es mayor o igual a 2.4 es ncesario activar este modulo y
 ##### *Líneas de comando*
 ```sh
 $ sudo a2enmod cgi
-$ sudo service apache restart
+$ sudo service apache2 restart
 ```
