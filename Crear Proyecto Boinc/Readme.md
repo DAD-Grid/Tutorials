@@ -15,7 +15,7 @@ $  cd ~/boinc-src/tools
 
 ### Crear proyecto
 ```sh
-$  ./make_project --url_base <direccionServidor> --dbuser boincadm <nombreProyecto>
+$  ./make_project --url_base <direccionServidor, puede ser ip o por dns ej http://boinc.com> --db_user boincadm <nombreProyecto>
 ```
 se deben cambiar los campos direccionServidor y nombreProyecto por los valores correctos
 
