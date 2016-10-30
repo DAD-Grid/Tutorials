@@ -1,7 +1,5 @@
 # Compilación Cruzada ITK con Docker
 
-//TODO: Mejorar redacción y  explicación
-
 ## Prerrequitos
  * Sistema Operativo Linux
  * Git 
@@ -31,10 +29,10 @@ $   usermod -aG docker <usuario>
 $   mkdir cross-compile && cd cross-compile
 ```
 
-### Descargar el branch release de ITK
+### Descargar el branch release de ITK, solo el branch master está habilitado para compilación cruzada.
 
 ```sh
-$    git clone https://github.com/InsightSoftwareConsortium/ITK.git --branch release
+$    git clone https://github.com/InsightSoftwareConsortium/ITK.git
 ```
 
 ### Descargar y ejecutar la imagen para hacer la compilación cruzada de ITK
