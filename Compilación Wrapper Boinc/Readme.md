@@ -97,29 +97,30 @@ Los archivos a modificar son los siguientes:
 * build_openssl_arm.sh
 * build_wrapper_arm.sh
 
-* #### Scipt _**build_curl_arm.sh**_
+#### Scipt _**build_curl_arm.sh**_
 
 La ruta de la variable CURL debe apuntar al lugar donde se descargó el código fuente. Para esto se debe sobreescribir la ruta que viene por defecto cambiándola por:
 
 ```sh
 $  CURL="$HOME/curl"
 ```
-* #### Scipt _**build_openssl_arm.sh**_
+#### Scipt _**build_openssl_arm.sh**_
 
 La ruta de la variable OPENSSL debe apuntar al lugar donde se descargó el código fuente. Para esto se debe sobreescribir la ruta que viene por defecto cambiándola por:
 
 ```sh
 $  OPENSSL="$HOME/openssl"
 ```
-* #### Scipt _**build_wrapper_arm.sh**_
+#### Scipt _**build_wrapper_arm.sh**_
 
 Revisar que las variables definidas sean consistentes con lo definido previamente.
 
 Se le debe agregar a la variable CXX_FLAGS las  banderas fPIE y pie. Esto con el fin de generar ejecutables PIE (position independent executables) exigidos desde Android 5.0 y soportados desde la versión 4.1. En el momento de creación de este tutorial la variable completa deberìa quedar de la siguiente manera.
+
 ```sh
 $  export CXXFLAGS="--sysroot=$TCSYSROOT -DANDROID -Wall -I$TCINCLUDES/include -funroll-loops -fexceptions -O3 -fomit-frame-pointer -fPIE -pie"
 ```
-* ### Corrección archivo configure.ac
+### Corrección archivo configure.ac
 En la carpeta fuente de boinc (boinc-src) se encuentra el archivo configure.ac que utiliza el script build_wrapper_arm.sh, este hace
 una verificación de la versión de curl y si no se tiene la versión 7.17.1, la compilación va a terminar con errores.
 Por esta razón es necesario elimiar esta comprobación en el archivo configure.ac comentareando la siguiente línea:
@@ -146,3 +147,5 @@ $ sudo ./build_wrapper_arm.sh
 ## Errores Comunes
 
 * El dispositivo solo acepta ejecutables position independent. Agregar las banderas -fPIE -pie a CXX_FLAGS en el archivo build_wrapper_arm.sh
+
+* Error en tiempo de ejecución del wrapper, output file absent. Para corregir este error es necesario modificar el código fuente del wrapper para que no utilize la variable de entorno PWD. Una versión del wrapper modificado se puede encontrar en esta rama del fork de Boinc de este proyecto.  [Fork de Boinc](https://github.com/DAD-Grid/boinc/tree/android-wrapper)
