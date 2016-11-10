@@ -5,7 +5,7 @@ Este tutorial se basa en:
 * https://boinc.berkeley.edu/trac/wiki/ServerIntro
 
 ## Prerrequitos
- * Sistema Operativo Linux. Distribución Ubuntu 14.04.5 x64
+ * Sistema Operativo Linux. Distribución Ubuntu 14.04 LTS.
 
 ## Instalación Dependencias
 
