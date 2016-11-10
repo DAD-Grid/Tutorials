@@ -146,4 +146,3 @@ $ sudo ./build_wrapper_arm.sh
 ## Errores Comunes
 
 * El dispositivo solo acepta ejecutables position independent. Agregar las banderas -fPIE -pie a CXX_FLAGS en el archivo build_wrapper_arm.sh
-* El wrapper se ejecuta pero no hay un error al subir los resultados. TODO: nombres de archivos, modificación del código fuente
