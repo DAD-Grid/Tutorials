@@ -23,7 +23,7 @@ Este tutorial se basa en:
     -libcurl4-openssl-dev 
     -libnotify-dev
 ```
-##### *Línea de comando*
+##### *Script*
 ```sh
 $  sudo apt-get update #opcional, pero recomendado
 $  sudo apt-get install mysql-server mysql-client php5 apache2 php5-gd php5-cli php5-mysql python-mysqldb libssl-dev libcurl4-openssl-dev libnotify-dev
@@ -41,14 +41,14 @@ $  sudo apt-get install mysql-server mysql-client php5 apache2 php5-gd php5-cli 
   -make 
   -git 
 ```
-##### *Línea de comando*
+##### *Script*
 ```sh
 $  sudo apt-get install build-essential libtool automake autoconf pkg-config libmysql++-dev libssl-dev make git
 ```
 
 ## Creación de usuario boincadm
 ### Registrar datos personales asociados al usuario boincadm
-##### *Línea de comando*
+##### *Script*
 
 ```sh
 $ sudo adduser boincadm
@@ -58,7 +58,7 @@ $ sudo adduser boincadm
 
 ### Agregar usuario boincadm al grupo de sudo
 
-##### *Línea de comando*
+##### *Script*
 
 ```sh
 $ sudo adduser boincadm sudo
@@ -66,7 +66,7 @@ $ sudo adduser boincadm sudo
 
 ### Agregar usuario boincadm al grupo de apache
 
-##### *Línea de comando*
+##### *Script*
 
 ```sh
 $ sudo usermod -a -G boincadm www-data
@@ -83,7 +83,7 @@ $ mysql -u root -p
 ```
 ### Cambiar de sesión al boincadm e ir a la carpeta raiz
 
-##### *Línea de comando*
+##### *Script*
 ```sh
 $ su boincadm
 $ cd $HOME
@@ -92,7 +92,7 @@ $ cd $HOME
 
 ### Clonar repositorio de boinc en la carpeta boinc-src
 
-##### *Línea de comando*
+##### *Script*
 
 ```sh
 $ git clone https://github.com/BOINC/boinc.git boinc-src
@@ -109,9 +109,9 @@ $ make
 
 ## Habilitar el modulo CGI de apache
 
-Si la version de apache es mayor o igual a 2.4 es ncesario activar este modulo y reinicar apache
+Si la versión de apache es mayor o igual a 2.4 es necesario activar este modulo y reinicar apache
 
-##### *Líneas de comando*
+##### *Script*
 ```sh
 $ sudo a2enmod cgi
 $ sudo service apache2 restart
