@@ -25,5 +25,5 @@ compilar el proyecto indicando la ubicación de la carpeta donde está construid
 ```sh
 $    cmake  -DITK_DIR=/path/to/static/ITK -DCMAKE_EXE_LINKER_FLAGS="-fPIE -pie"
 ```
-* También se deben indicar las de possition independant executables (pie) que está soportado desde la version 4.1 de android y es obligatorio dede 5.0
+* También se deben indicar las de possition independant executables (pie) que está soportado desde la version 4.1 de android y es obligatorio desde 5.0
 
