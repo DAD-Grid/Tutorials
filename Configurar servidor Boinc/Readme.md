@@ -75,7 +75,7 @@ $ sudo usermod -a -G boincadm www-data
 #### Este será el usuario que se usará durante este tutorial para que Boinc administre la base de datos de cada proyecto.
 #### La contraseña que solicita para entrar a _mysql_ es la que se indicó en la instalación de los paquetes que necesita Boinc.
 ##### *Líneas de comando*
-```sh
+```sql
 $ mysql -u root -p
 > GRANT ALL ON *.* TO 'boincadm'@'localhost';
 > SET PASSWORD FOR 'boincadm'@'localhost'='';
